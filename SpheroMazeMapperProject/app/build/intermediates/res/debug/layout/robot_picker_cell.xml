@@ -14,4 +14,4 @@
 		android:checkMark="?android:attr/listChoiceIndicatorSingle"
         android:gravity="center_vertical|center_horizontal"
         android:background="@drawable/robot_row_background"/>
-</RelativeLayout><!-- From: file:/C:/Users/Christopher/AndroidStudioProjects/UISample/app/src/main/res/layout/robot_picker_cell.xml -->
+</RelativeLayout><!-- From: file:/Users/Lauren/CU/spring15/EMEN5830/SpheroMazeMapper/SpheroMazeMapperProject/app/src/main/res/layout/robot_picker_cell.xml -->

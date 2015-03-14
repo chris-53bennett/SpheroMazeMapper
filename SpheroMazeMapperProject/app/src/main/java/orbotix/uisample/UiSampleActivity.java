@@ -22,6 +22,7 @@ import orbotix.sphero.Sphero;
 import orbotix.view.calibration.CalibrationView;
 import orbotix.view.calibration.ControllerActivity;
 import orbotix.view.connection.SpheroConnectionView;
+/** Dev Notes: We're awesome*/
 
 public class UiSampleActivity extends ControllerActivity {
     /** ID to start the StartupActivity for result to connect the Robot */
