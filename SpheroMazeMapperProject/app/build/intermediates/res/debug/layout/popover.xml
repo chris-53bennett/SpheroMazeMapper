@@ -30,4 +30,4 @@
     	android:layout_below="@id/scroller"
         android:src="@drawable/arrow_down" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Christopher/AndroidStudioProjects/UISample/app/src/main/res/layout/popover.xml -->
+</RelativeLayout><!-- From: file:/Users/Lauren/CU/spring15/EMEN5830/SpheroMazeMapper/SpheroMazeMapperProject/app/src/main/res/layout/popover.xml -->

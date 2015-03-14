@@ -6,4 +6,4 @@
 		android:fromAlpha="1.0" android:toAlpha="0.0"
 		android:duration="300"
 	/>
-</set><!-- From: file:/C:/Users/Christopher/AndroidStudioProjects/UISample/app/src/main/res/anim/disappear.xml -->
+</set><!-- From: file:/Users/Lauren/CU/spring15/EMEN5830/SpheroMazeMapper/SpheroMazeMapperProject/app/src/main/res/anim/disappear.xml -->
