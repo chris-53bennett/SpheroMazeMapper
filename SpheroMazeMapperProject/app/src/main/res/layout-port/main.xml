@@ -28,6 +28,45 @@
             android:onClick="onSleepClick"
             android:text="Sleep"/>
 
+    <Button
+        android:id="@+id/stop_button"
+        style="@style/ControlButton"
+        android:layout_centerInParent="true"
+        android:onClick="onStopClick"
+        android:text="STOP"/>
+
+    <Button
+        android:id="@+id/zero_button"
+        style="@style/ControlButton"
+        android:layout_above="@id/stop_button"
+        android:layout_alignLeft="@id/stop_button"
+        android:onClick="onControlClick"
+        android:text="0˚"/>
+
+    <Button
+        android:id="@+id/ninety_button"
+        style="@style/ControlButton"
+        android:layout_alignTop="@id/stop_button"
+        android:layout_toRightOf="@id/stop_button"
+        android:onClick="onControlClick"
+        android:text="90˚"/>
+
+    <Button
+        android:id="@+id/one_eighty_button"
+        style="@style/ControlButton"
+        android:layout_alignLeft="@id/stop_button"
+        android:layout_below="@id/stop_button"
+        android:onClick="onControlClick"
+        android:text="180˚"/>
+
+    <Button
+        android:id="@+id/two_seventy_button"
+        style="@style/ControlButton"
+        android:layout_alignTop="@id/stop_button"
+        android:layout_toLeftOf="@id/stop_button"
+        android:onClick="onControlClick"
+        android:text="270˚"/>
+
     <orbotix.robot.widgets.CalibrationImageButtonView
             android:id="@+id/calibration_image_button"
             android:layout_width="50dp"
@@ -49,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"/>
-
+<!--
     <orbotix.robot.widgets.joystick.JoystickView
             android:id="@+id/joystick"
             android:layout_width="250dp"
@@ -58,7 +97,7 @@
             android:layout_centerVertical="true"
             app:edge_overlap="20dp"
             app:puck_radius="30dp"/>
-
+-->
     <orbotix.view.calibration.CalibrationView
             android:id="@+id/calibration_view"
             android:layout_width="fill_parent"
