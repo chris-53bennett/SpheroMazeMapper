@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 import orbotix.robot.app.ColorPickerActivity;
 import orbotix.robot.base.Robot;
+import orbotix.robot.base.RobotProvider;
 import orbotix.robot.widgets.CalibrationImageButtonView;
 import orbotix.robot.widgets.NoSpheroConnectedView;
 import orbotix.robot.widgets.NoSpheroConnectedView.OnConnectButtonClickListener;
@@ -109,7 +110,7 @@ public class UiSampleActivity extends ControllerActivity {
         });
 
         //Add the JoystickView as a Controller
-        addController((JoystickView) findViewById(R.id.joystick));
+        //addController((JoystickView) findViewById(R.id.joystick));
 
         // Add the calibration view
         mCalibrationView = (CalibrationView) findViewById(R.id.calibration_view);
@@ -266,5 +267,51 @@ public class UiSampleActivity extends ControllerActivity {
         mCalibrationView.interpretMotionEvent(event);
         mSlideToSleepView.interpretMotionEvent(event);
         return super.dispatchTouchEvent(event);
+    }
+
+    /**
+     * When the user clicks "STOP", stop the Robot.
+     *
+     * @param v The View that had been clicked
+     */
+    public void onStopClick(View v) {
+        if (mRobot != null) {
+            // Stop robot
+            mRobot.stop();
+        }
+    }
+
+    /**
+     * When the user clicks a control button, roll the Robot in that direction
+     *
+     * @param v The View that had been clicked
+     */
+    public void onControlClick(View v) {
+        // Find the heading, based on which button was clicked
+        final float heading;
+        switch (v.getId()) {
+
+            case R.id.ninety_button:
+                heading = 90f;
+                break;
+
+            case R.id.one_eighty_button:
+                heading = 180f;
+                break;
+
+            case R.id.two_seventy_button:
+                heading = 270f;
+                break;
+
+            default:
+                heading = 0f;
+                break;
+        }
+
+        // Set speed. 60% of full speed
+        final float speed = 0.6f;
+
+        // Roll robot
+        mRobot.drive(heading, speed);
     }
 }
